@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         user.setUserGenreInfoModified(genrePreference);
         userRepository.save(user);
     }
-
+//
     @Override
     public UserReponseDto.ProfileResponse findProfileUser(Integer userId) {
         return UserReponseDto.ProfileResponse.profileResponse(userRepository.findById(userId));
