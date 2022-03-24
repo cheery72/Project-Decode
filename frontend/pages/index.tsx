@@ -4,6 +4,7 @@ import { Grid, GridColumn, Image } from "semantic-ui-react"
 // Component
 import Data from '../src/component/main/data'
 import Explain from '../src/component/main/explain'
+import FourPosters from '../src/component/main/fourPosters'
 
 const Home: NextPage = () => {
   return (
@@ -12,20 +13,7 @@ const Home: NextPage = () => {
         <Grid.Row>
           <Grid.Column width={2}></Grid.Column>
           <Grid.Column width={12}>
-            <Grid centered columns={4}>
-              <Grid.Column>
-                <Image src = "https://yologuys.com/Escape_img/theme/1753.jpg;" alt='test'></Image> 
-              </Grid.Column>
-              <Grid.Column>
-                <Image src = "https://yologuys.com/Escape_img/theme/1753.jpg;" alt='test'></Image> 
-              </Grid.Column>
-              <Grid.Column>
-                <Image src = "https://yologuys.com/Escape_img/theme/1753.jpg;" alt='test'></Image> 
-              </Grid.Column>
-              <Grid.Column>
-                <Image src = "https://yologuys.com/Escape_img/theme/1753.jpg;" alt='test'></Image> 
-              </Grid.Column>
-            </Grid>
+            <FourPosters/>
             <Grid centered columns={5}>
               <Data/>
             </Grid>
