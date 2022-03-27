@@ -1,1 +1,5 @@
-*.yml
+backend/AuthServer/src/main/resources/*.yml
+backend/EscapeServer/src/main/resources/*.yml
+backend/ConfigServer/src/main/resources/*.yml
+backend/GateWayServer/src/main/resources/*.yml
+backend/EurekaServer/src/main/resources/*.yml
