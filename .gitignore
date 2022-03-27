@@ -1,4 +1,4 @@
-backend/AuthServer/src/main/resources/application.yml
+./backend/AuthServer/src/main/resources/application.yml
 backend/AuthServer/src/main/resources/application-oauth.yml
 backend/AuthServer/src/main/resources/bootstrap.yml
 
