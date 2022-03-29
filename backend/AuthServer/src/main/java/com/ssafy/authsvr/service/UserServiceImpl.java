@@ -11,6 +11,7 @@ import com.ssafy.authsvr.payload.request.UserProfileRequest;
 import com.ssafy.authsvr.payload.response.UserDetailProfileResponse;
 import com.ssafy.authsvr.payload.response.UserProfileResponse;
 import com.ssafy.authsvr.entity.User;
+import com.ssafy.authsvr.payload.response.UserTestResponse;
 import com.ssafy.authsvr.repository.GenrePreferenceRepository;
 import com.ssafy.authsvr.repository.PreferenceDocumentRepository;
 import com.ssafy.authsvr.repository.UserRepository;
@@ -110,6 +111,8 @@ public class UserServiceImpl implements UserService {
     public UserDetailProfileResponse findAllProfileUser(Integer userId) {
         Optional<User> users = userRepository.findById(userId);
         User user = users.orElseThrow(NoSuchElementException::new);
+//        UserTestResponse userDetailProfileResponse= userRepository.findUserPreferenceBy(userId);
+        
         return UserDetailProfileResponse.allProfileResponse(user,
                                                     genrePreferenceRepository.findGenreById(user.getGenrePreference().getId()));
     }

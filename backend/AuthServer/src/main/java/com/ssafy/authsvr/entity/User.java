@@ -6,6 +6,8 @@ import com.ssafy.authsvr.payload.request.UserProfileRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
