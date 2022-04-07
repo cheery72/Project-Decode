@@ -11,6 +11,11 @@ import py_eureka_client.eureka_client as eureka_client
 
 # Create your views here.
 # mysql 연결
+
+eureka_client.init(eureka_server="http://j6c203.p.ssafy.io:8761",
+                    app_name="ANALYSIS-SERVER",
+                    instance_port= 8083)
+
 conn = pymysql.connect(host='j6c203.p.ssafy.io', port=3306,
                        user='escape', password='escape', db='escape', charset='utf8')
 curs = conn.cursor()
@@ -18,10 +23,6 @@ curs = conn.cursor()
 
 @api_view(['GET'])
 def index(request):
-    
-    eureka_client.init(eureka_server="http://j6c203.p.ssafy.io:8761",
-                        app_name="ANALYSIS-SERVER",
-                        instance_port= 8083)
 
     theme = pymongo.MongoClient("j6c203.p.ssafy.io", 27017).escape.theme
     review = pymongo.MongoClient("j6c203.p.ssafy.io", 27017).escape.review

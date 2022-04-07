@@ -7,6 +7,8 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://j6c203.p.ssafy.io:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 spring:
   application:
